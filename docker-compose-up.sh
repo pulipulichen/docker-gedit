@@ -12,7 +12,7 @@ export VIDEO_GID=`getent group video | cut -d: -f3`
 #export LC_ALL=$LC_ALL
 #export LANG=$LANG
 
-#docker-compose up
+docker-compose up
 #docker-compose run app gedit
-docker-compose run app bash
+#docker-compose run app bash
 
