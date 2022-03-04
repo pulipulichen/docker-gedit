@@ -24,7 +24,7 @@ services:
       - XMODIFIERS=${XMODIFIERS}
       - QT_IM_MODULE=${QT_IM_MODULE}
       - GTK_IM_MODULE=${GTK_IM_MODULE}
-      #- AUDIO_ID=${AUDIO_ID}
-      #- VIDEO_GID=${VIDEO_GID}
+      - AUDIO_ID=${AUDIO_ID}
+      - VIDEO_GID=${VIDEO_GID}
     # https://docs.docker.com/compose/compose-file/compose-file-v3/
     privileged: true
