@@ -20,7 +20,7 @@ services:
       - DISPLAY=${DISPLAY}
       - TZ=${TZ}
       - LANG=${LANG}
-      #- LC_ALL=${LC_ALL}
+      - LC_ALL=${LC_ALL}
       - XMODIFIERS=${XMODIFIERS}
       - QT_IM_MODULE=${QT_IM_MODULE}
       - GTK_IM_MODULE=${GTK_IM_MODULE}

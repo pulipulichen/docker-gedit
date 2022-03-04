@@ -20,7 +20,5 @@ RUN apt-get install -y fcitx5
 RUN apt-get install -y language-pack-zh-hans
 
 RUN locale-gen zh_TW.UTF-8  
-ENV LANG=zh_TW.UTF-8 \
-    LC_ALL=zh_TW.UTF-8
 
 ENTRYPOINT gedit 
