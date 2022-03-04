@@ -1,24 +1,24 @@
-# https://linuxtut.com/en/12060150fad1616e37a0/#fromHistory
 FROM ubuntu:20.04
 
-#ENV DEBIAN_FRONTEND=noninteractive
+# ----------------------
+# Necessary for most operations
 
 RUN useradd -m user
-
 RUN apt-get update
 
-#RUN apt-get install -y fonts-noto-cjk
+# ----------------------
+# Necessary for Chinese typing
+
+RUN DEBIAN_FRONTEND=noninteractive \
+      apt-get install -y \
+      fonts-noto-cjk language-pack-zh-hans
+RUN locale-gen zh_TW.UTF-8  
+ENV LC_ALL=zh_TW.UTF-8
 
 # ----------------------
+# Setup application
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gedit
-
-RUN apt-get install -y fonts-noto-cjk
-
-RUN apt-get install -y fcitx5
-
-RUN apt-get install -y language-pack-zh-hans
-
-RUN locale-gen zh_TW.UTF-8  
-
+RUN DEBIAN_FRONTEND=noninteractive \
+      apt-get install -y \
+      gedit
 ENTRYPOINT gedit 
